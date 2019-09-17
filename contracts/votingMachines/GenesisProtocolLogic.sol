@@ -1,4 +1,4 @@
-pragma solidity ^0.5.4;
+pragma solidity ^0.4.24;
 
 import "./IntVoteInterface.sol";
 import { RealMath } from "../libs/RealMath.sol";
@@ -250,7 +250,7 @@ contract GenesisProtocolLogic is IntVoteInterface {
      * @param _voteOnBehalf - authorized to vote on behalf of others.
     */
     function setParameters(
-        uint[11] calldata _params, //use array here due to stack too deep issue.
+        uint[11] _params, //use array here due to stack too deep issue.
         address _voteOnBehalf
     )
     external

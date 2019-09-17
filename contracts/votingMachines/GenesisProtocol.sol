@@ -1,4 +1,4 @@
-pragma solidity ^0.5.4;
+pragma solidity ^0.4.24;
 
 import "openzeppelin-solidity/contracts/cryptography/ECDSA.sol";
 import "./GenesisProtocolLogic.sol";
@@ -64,7 +64,7 @@ contract GenesisProtocol is IntVoteInterface, GenesisProtocolLogic {
         uint256 _amount,
         uint256 _nonce,
         uint256 _signatureType,
-        bytes calldata _signature
+        bytes _signature
         )
         external
         returns(bool)

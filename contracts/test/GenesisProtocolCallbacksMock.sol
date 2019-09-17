@@ -1,4 +1,4 @@
-pragma solidity ^0.5.4;
+pragma solidity ^0.4.24;
 
 import "../votingMachines/VotingMachineCallbacksInterface.sol";
 import "../votingMachines/ProposalExecuteInterface.sol";
@@ -57,7 +57,7 @@ contract GenesisProtocolCallbacksMock is Debug, VotingMachineCallbacksInterface,
         return _stakingToken.transfer(_beneficiary, _amount);
     }
 
-    function setParameters(uint[11] calldata _params, address _voteOnBehalf) external returns(bytes32) {
+    function setParameters(uint[11] _params, address _voteOnBehalf) external returns(bytes32) {
         return genesisProtocol.setParameters(_params, _voteOnBehalf);
     }
 
